@@ -11,3 +11,15 @@
 
 # However if you say 'I LOVE YOU GRANDMA!', she should respond with
 # 'I LOVE YOU TOO PUMPKIN!'
+require 'pry'
+
+def speak_to_grandma(phrase)
+  binding.pry
+  if phrase == phrase.upcase && phrase == "I LOVE YOU GRANDMA!"
+    return "I LOVE YOU TOO PUMPKIN!"
+  elsif phrase == phrase.capitalize
+    return "HUH?! SPEAK UP, SONNY!"
+  else phrase == "WHAT DID YOU EAT TODAY?" || phrase == "WHAT?"
+    return "NO, NOT SINCE 1938!"
+  end
+end

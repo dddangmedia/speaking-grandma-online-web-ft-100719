@@ -14,12 +14,11 @@
 require 'pry'
 
 def speak_to_grandma(phrase)
-  binding.pry
-  if phrase == phrase.upcase && phrase == "I LOVE YOU GRANDMA!"
-    return "I LOVE YOU TOO PUMPKIN!"
-  elsif phrase == phrase.capitalize
+  if phrase
     return "HUH?! SPEAK UP, SONNY!"
-  else phrase == "WHAT DID YOU EAT TODAY?" || phrase == "WHAT?"
+  elsif phrase == phrase.upcase
     return "NO, NOT SINCE 1938!"
+  else phrase == "I LOVE YOU GRANDMA!"
+    return "I LOVE YOU TOO PUMPKIN!"
   end
 end
